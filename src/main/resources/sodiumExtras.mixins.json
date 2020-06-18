@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.eatmyvenom.sodiumExtras.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "no_biome_skycolor_mixin",
+    "no_hurtcam_mixin",
+    "static_fov_mixin",
+    "no_toast_mixin",
+    "no_biome_colors_mixin",
+    "looknt_mixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
