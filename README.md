@@ -7,4 +7,4 @@ also if this breaks anything that sucks. i will maybe try to fix it.
 this is just for extra options on sodium thats all...
 i made it work too but i mixin to sodium
 
-Its unlicensed because in case anyone wants this ever
+Its cc0 because in case anyone wants this ever
