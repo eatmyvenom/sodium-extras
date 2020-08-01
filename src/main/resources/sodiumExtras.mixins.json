@@ -6,12 +6,13 @@
   "mixins": [
   ],
   "client": [
-    "no_biome_skycolor_mixin",
-    "no_hurtcam_mixin",
-    "static_fov_mixin",
-    "no_toast_mixin",
-    "no_biome_colors_mixin",
-    "looknt_mixin"
+    "BiomeColorsMixin",
+    "BiomeMixin",
+    "CameraMixin",
+    "GameRendererMixin",
+    "ToastManagerMixin",
+  
+    "Sodium.SodiumOptionsGUIMixin"
   ],
   "injectors": {
     "defaultRequire": 1
