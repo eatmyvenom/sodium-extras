@@ -6,6 +6,8 @@ import me.jellysquid.mods.sodium.client.gui.options.OptionGroup;
 import me.jellysquid.mods.sodium.client.gui.options.OptionImpl;
 import me.jellysquid.mods.sodium.client.gui.options.OptionPage;
 import me.jellysquid.mods.sodium.client.gui.options.control.TickBoxControl;
+import io.github.eatmyvenom.sodiumExtras.SodiumExtraFeatures;
+import io.github.eatmyvenom.sodiumExtras.features.FullbrightFeature;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,6 @@ public class SodiumExtrasOptionPages {
                         .setTooltip("Shake the camera when the player is damaged")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.hurtcam = value, options -> options.options.hurtcam)
-                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
@@ -47,7 +48,6 @@ public class SodiumExtrasOptionPages {
                         .setTooltip("Advancement and crafting recipe popups")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.toasts = value, options -> options.options.toasts)
-                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
                         .build())
                         
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
@@ -55,7 +55,6 @@ public class SodiumExtrasOptionPages {
                         .setTooltip("Don't change fov based on speed or effects")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.staticFov = value, options -> options.options.staticFov)
-                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
@@ -63,7 +62,6 @@ public class SodiumExtrasOptionPages {
                         .setTooltip("Don't lerp the camera to sneak")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.instantSneak = value, options -> options.options.instantSneak)
-                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
@@ -72,6 +70,13 @@ public class SodiumExtrasOptionPages {
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.noOverlay = value, options -> options.options.noOverlay)
                         .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Fullbright")
+                        .setTooltip("Make everything max brightness")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> {options.options.fullbright = value; SodiumExtraFeatures.fullbrightFeature.toggle(value); }, options -> options.options.fullbright)
                         .build())
                 
                 .build());

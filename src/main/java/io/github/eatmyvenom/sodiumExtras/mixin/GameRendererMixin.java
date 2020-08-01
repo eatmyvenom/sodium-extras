@@ -8,7 +8,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import io.github.eatmyvenom.sodiumExtras.SodiumExtra;
-import net.java.games.input.Component.Identifier;
+
+import net.minecraft.util.Identifier;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;

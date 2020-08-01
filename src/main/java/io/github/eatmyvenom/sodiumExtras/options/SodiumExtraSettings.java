@@ -10,6 +10,8 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import io.github.eatmyvenom.sodiumExtras.SodiumExtraFeatures;
+
 public class SodiumExtraSettings {
 
     public final Settings options = new Settings();
@@ -23,8 +25,13 @@ public class SodiumExtraSettings {
         public boolean instantSneak = false;
         public boolean noOverlay = false;
         public boolean preventShaders = false;
+        public boolean fullbright = false;
     }
 
+    private void initFeatures() {
+        SodiumExtraFeatures.fullbrightFeature.toggle(options.fullbright);
+    }
+    
     private File jsonFile;
     private static final Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).excludeFieldsWithModifiers(Modifier.PRIVATE).create();
 
@@ -45,6 +52,7 @@ public class SodiumExtraSettings {
         settings.jsonFile = file;
 
         settings.writeToFile();
+        settings.initFeatures();
         return settings;
     }
 
