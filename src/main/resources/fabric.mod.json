@@ -4,18 +4,21 @@
   "version": "${version}",
 
   "name": "Sodium Extras",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "This mod is just some addons to the Sodium mod by Jellysquid3",
   "authors": [
-    "Me!"
+    "EatMyVenom"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/eatmyvenom/sodium-extras"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "icon": "assets/sodium-extras/icon.png",
+  "entrypoints": {
+    "client": [
+      "io.github.eatmyvenom.sodiumExtras.SodiumExtra"
+    ]
+  },
   "environment": "*",
   "mixins": [
     "sodiumExtras.mixins.json"
@@ -23,9 +26,7 @@
 
   "depends": {
     "fabricloader": ">=0.7.4",
-    "minecraft": "1.15.x"
-  },
-  "suggests": {
-    "flamingo": "*"
+    "minecraft": "1.16.x",
+    "sodium": "*"
   }
 }
