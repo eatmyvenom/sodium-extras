@@ -73,6 +73,14 @@ public class SodiumExtrasOptionPages {
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Prevent Shaders")
+                        .setTooltip("Prevents any types of shaders from loading")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.preventShaders = value, options -> options.options.preventShaders)
+                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
                         .setName("Fullbright")
                         .setTooltip("Make everything max brightness")
                         .setControl(TickBoxControl::new)
