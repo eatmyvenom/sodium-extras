@@ -1,4 +1,4 @@
-package io.github.eatmyvenom.sodiumExtras;
+package io.github.eatmyvenom.sodiumExtras.options;
 
 import java.io.File;
 import java.io.FileReader;
@@ -22,6 +22,7 @@ public class SodiumExtraSettings {
         public boolean staticFov = false;
         public boolean instantSneak = false;
         public boolean noOverlay = false;
+        public boolean preventShaders = false;
     }
 
     private File jsonFile;

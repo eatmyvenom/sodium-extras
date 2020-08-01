@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import io.github.eatmyvenom.sodiumExtras.SodiumExtra;
+import net.java.games.input.Component.Identifier;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -26,5 +27,19 @@ public class GameRendererMixin {
 		if(SodiumExtra.getSettings().options.staticFov) {
 			cir.setReturnValue(currentFov);
 		}
-	}
+    }
+    
+    @Inject(method = "toggleShadersEnabled", at = @At("HEAD"), cancellable = true)
+    private void preventShaders(CallbackInfo ci) {
+        if(SodiumExtra.getSettings().options.preventShaders) {
+            ci.cancel();
+        }
+    }
+
+    @Inject(method = "loadShader", at = @At("HEAD"), cancellable = true)
+    private void dontLoadShader(Identifier identifier, CallbackInfo ci) {
+        if(SodiumExtra.getSettings().options.preventShaders) {
+            ci.cancel();
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package io.github.eatmyvenom.sodiumExtras;
+package io.github.eatmyvenom.sodiumExtras.options;
 
 import java.io.File;
 

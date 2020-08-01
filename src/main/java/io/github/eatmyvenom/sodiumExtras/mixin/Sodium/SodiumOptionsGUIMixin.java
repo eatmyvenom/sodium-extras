@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import io.github.eatmyvenom.sodiumExtras.SodiumExtrasOptionPages;
+import io.github.eatmyvenom.sodiumExtras.options.SodiumExtrasOptionPages;
 import me.jellysquid.mods.sodium.client.gui.SodiumOptionsGUI;
 import me.jellysquid.mods.sodium.client.gui.options.OptionPage;
 

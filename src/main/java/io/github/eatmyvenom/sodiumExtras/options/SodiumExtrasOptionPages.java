@@ -1,4 +1,4 @@
-package io.github.eatmyvenom.sodiumExtras;
+package io.github.eatmyvenom.sodiumExtras.options;
 
 import com.google.common.collect.ImmutableList;
 import me.jellysquid.mods.sodium.client.gui.options.OptionFlag;
