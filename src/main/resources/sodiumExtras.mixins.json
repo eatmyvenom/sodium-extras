@@ -6,6 +6,15 @@
   "mixins": [
   ],
   "client": [
+    "no_biome_skycolor_mixin",
+    "no_hurtcam_mixin",
+    "static_fov_mixin",
+    "no_toast_mixin",
+    "no_biome_colors_mixin",
+    "no_fog_mixin",
+    "anti_illegal_look_position",
+    "anti_illegal_look_BOTH",
+    "clientkiller",
     "BiomeColorsMixin",
     "BiomeMixin",
     "CameraMixin",
