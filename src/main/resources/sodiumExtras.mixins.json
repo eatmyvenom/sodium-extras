@@ -14,7 +14,14 @@
     "no_fog_mixin",
     "anti_illegal_look_position",
     "anti_illegal_look_BOTH",
-    "clientkiller"
+    "clientkiller",
+    "BiomeColorsMixin",
+    "BiomeMixin",
+    "CameraMixin",
+    "GameRendererMixin",
+    "ToastManagerMixin",
+  
+    "Sodium.SodiumOptionsGUIMixin"
   ],
   "injectors": {
     "defaultRequire": 1
