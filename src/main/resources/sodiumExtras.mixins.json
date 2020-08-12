@@ -11,6 +11,7 @@
     "CameraMixin",
     "GameRendererMixin",
     "ToastManagerMixin",
+    "WorldMixin",
   
     "Sodium.SodiumOptionsGUIMixin"
   ],

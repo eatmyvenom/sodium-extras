@@ -37,6 +37,22 @@ public class SodiumExtrasOptionPages {
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Rain senabled")
+                        .setTooltip("Show rain when it rains")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.rain = value, options -> options.options.rain)
+                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Show time")
+                        .setTooltip("Show the current daytime by the sun")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.dayTime = value, options -> options.options.skycolors)
+                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
                         .setName("Hurtcam")
                         .setTooltip("Shake the camera when the player is damaged")
                         .setControl(TickBoxControl::new)

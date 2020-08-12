@@ -26,6 +26,8 @@ public class SodiumExtraSettings {
         public boolean noOverlay = false;
         public boolean preventShaders = false;
         public boolean fullbright = false;
+        public boolean rain = true;
+        public boolean dayTime = true;
     }
 
     private void initFeatures() {
