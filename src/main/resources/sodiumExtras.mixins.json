@@ -11,7 +11,10 @@
     "static_fov_mixin",
     "no_toast_mixin",
     "no_biome_colors_mixin",
-    "looknt_mixin"
+    "no_fog_mixin",
+    "anti_illegal_look_position",
+    "anti_illegal_look_BOTH",
+    "clientkiller"
   ],
   "injectors": {
     "defaultRequire": 1
