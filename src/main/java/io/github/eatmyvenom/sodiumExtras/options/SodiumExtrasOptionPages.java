@@ -81,6 +81,13 @@ public class SodiumExtrasOptionPages {
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Light Updates")
+                        .setTooltip("Processes lighting updates")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.lightUpdates = value, options -> options.options.lightUpdates)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
                         .setName("No overlays")
                         .setTooltip("Disable camera overlays")
                         .setControl(TickBoxControl::new)

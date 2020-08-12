@@ -28,6 +28,7 @@ public class SodiumExtraSettings {
         public boolean fullbright = false;
         public boolean rain = true;
         public boolean dayTime = true;
+        public boolean lightUpdates = true;
     }
 
     private void initFeatures() {
