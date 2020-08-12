@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import io.github.eatmyvenom.sodiumExtras.SodiumExtra;
 
@@ -20,9 +21,9 @@ public class LightingProviderMixin {
     }
 
     @Inject(at = @At("HEAD"), method = "doLightUpdates", cancellable = true)
-    public void doLightUpdates(int maxUpdateCount, boolean doSkylight, boolean skipEdgeLightPropagation, CallbackInfo ci) { 
+    public void doLightUpdates(int maxUpdateCount, boolean doSkylight, boolean skipEdgeLightPropagation, CallbackInfoReturnable cir) { 
         if(!SodiumExtra.getSettings().options.lightUpdates)
-            ci.cancel();
+            cir.setReturnValue(0);
     }
 
 

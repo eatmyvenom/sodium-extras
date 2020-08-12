@@ -29,6 +29,7 @@ public class SodiumExtraSettings {
         public boolean rain = true;
         public boolean dayTime = true;
         public boolean lightUpdates = true;
+        public boolean pistonAnimations = true;
     }
 
     private void initFeatures() {

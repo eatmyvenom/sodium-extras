@@ -82,9 +82,16 @@ public class SodiumExtrasOptionPages {
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
                         .setName("Light Updates")
-                        .setTooltip("Processes lighting updates")
+                        .setTooltip("Process lighting updates")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.lightUpdates = value, options -> options.options.lightUpdates)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Piston Animations")
+                        .setTooltip("Process piston animations")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.pistonAnimations = value, options -> options.options.pistonAnimations)
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
