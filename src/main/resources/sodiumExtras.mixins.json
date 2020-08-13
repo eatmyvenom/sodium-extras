@@ -9,6 +9,7 @@
     "CameraMixin",
     "GameRendererMixin",
     "LightingProviderMixin",
+    "PaintingEntityRendererMixin",
     "PistonBlockEntityRendererMixin",
     "ToastManagerMixin",
     "WorldMixin",

@@ -48,7 +48,15 @@ public class SodiumExtrasOptionPages {
                         .setName("Show time")
                         .setTooltip("Show the current daytime by the sun")
                         .setControl(TickBoxControl::new)
-                        .setBinding((options, value) -> options.options.dayTime = value, options -> options.options.skycolors)
+                        .setBinding((options, value) -> options.options.dayTime = value, options -> options.options.dayTime)
+                        .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
+                        .build())
+
+                .add(OptionImpl.createBuilder(boolean.class, extraOpts)
+                        .setName("Render Paintings")
+                        .setTooltip("Show paintings")
+                        .setControl(TickBoxControl::new)
+                        .setBinding((options, value) -> options.options.renderPaintings = value, options -> options.options.renderPaintings)
                         .setFlags(OptionFlag.REQUIRES_RENDERER_RELOAD)
                         .build())
 
