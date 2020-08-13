@@ -21,7 +21,7 @@ public class LightingProviderMixin {
     }
 
     @Inject(at = @At("HEAD"), method = "doLightUpdates", cancellable = true)
-    public void doLightUpdates(int maxUpdateCount, boolean doSkylight, boolean skipEdgeLightPropagation, CallbackInfoReturnable cir) { 
+    public void doLightUpdates(int maxUpdateCount, boolean doSkylight, boolean skipEdgeLightPropagation, CallbackInfoReturnable<Integer> cir) { 
         if(!SodiumExtra.getSettings().options.lightUpdates)
             cir.setReturnValue(0);
     }
