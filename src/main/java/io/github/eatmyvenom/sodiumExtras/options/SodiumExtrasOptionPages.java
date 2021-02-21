@@ -37,7 +37,7 @@ public class SodiumExtrasOptionPages {
                         .build())
 
                 .add(OptionImpl.createBuilder(boolean.class, extraOpts)
-                        .setName("Rain senabled")
+                        .setName("Rain enabled")
                         .setTooltip("Show rain when it rains")
                         .setControl(TickBoxControl::new)
                         .setBinding((options, value) -> options.options.rain = value, options -> options.options.rain)
