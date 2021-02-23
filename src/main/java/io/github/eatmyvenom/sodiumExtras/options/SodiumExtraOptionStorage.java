@@ -9,7 +9,7 @@ public class SodiumExtraOptionStorage implements OptionStorage<SodiumExtraSettin
     private final SodiumExtraSettings extraOpts;
 
     public SodiumExtraOptionStorage() {
-        extraOpts = SodiumExtraSettings.loadFromJson(new File("config/sodium-extra-options.json"));
+        extraOpts = SodiumExtraSettings.loadFromJson(new File("config/sodium-extras-options.json"));
     }
 
     @Override

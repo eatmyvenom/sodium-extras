@@ -18,7 +18,7 @@ public class SodiumExtra implements ClientModInitializer{
 
     public static SodiumExtraSettings getSettings() {
         if(settings == null) 
-            return settings = SodiumExtraSettings.loadFromJson(new File("config/sodium-extra-options.json"));
+            return settings = SodiumExtraSettings.loadFromJson(new File("config/sodium-extras-options.json"));
         else
             return settings;
     }
